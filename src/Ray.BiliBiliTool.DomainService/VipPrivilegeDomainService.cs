@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Ray.BiliBiliTool.Agent.BiliBiliAgent.Dtos;
 using Ray.BiliBiliTool.Agent.BiliBiliAgent.Interfaces;
-using Ray.BiliBiliTool.Config;
 using Ray.BiliBiliTool.Config.Options;
 using Ray.BiliBiliTool.DomainService.Interfaces;
 
@@ -68,8 +65,8 @@ namespace Ray.BiliBiliTool.DomainService
             }
         }
 
-
         #region private
+
         /// <summary>
         /// 领取大会员每月赠送福利
         /// </summary>
@@ -100,12 +97,14 @@ namespace Ray.BiliBiliTool.DomainService
             {
                 case 1:
                     return "领取年度大会员每月赠送的B币券";
+
                 case 2:
                     return "领取大会员福利/权益";
             }
 
             return "";
         }
-        #endregion
+
+        #endregion private
     }
 }
